@@ -1,5 +1,68 @@
 /* ----- CUSTOM PROPERTIES ----- */
 
+/* 
+  Heading L - Semi Bold - 80px, 80px - 60px, 60px - 50px, 50px
+  Heading M - Semi Bold  - 56px, 64px - 48px, 56px - 32px, 48px
+
+  Nav - Bold - 18px, 32px - 16px, 32px - Same
+  Body - Regular - 18px, 32px - 16px, 28px - Same
+  Heading S - Semi Bold  - 32px, 40px - 28px, 36px - Same
+  List - Regular - 24px, 40px - 20px, 36px - Same
+  */
+
+/* 1rem;  16px */
+/* 1.125rem; 18px */
+/*1.75rem; 28px */
+/* 2rem; 32px */
+/* 3rem; 48px */
+/* 3.125rem; 50px */
+/* 3.5rem; 56px */
+/* 3.75rem; 60 px */
+/* 5rem; 80px */
+
+/* Mobile 375px, 23.4375em */
+/* Tablet 768px, 48em */
+/* Desktop 1440px, 90em */
+
+:root {
+  --clr-primary-100: hsl(276, 100%, 99%); /* Ghost White */
+  --clr-primary-400: hsl(273, 85%, 13%); /* Dark Purple */
+
+  --clr-accent-400: hsl(150, 100%, 63%); /* Eucaplyptus */
+
+  --clr-neutral-100: hsla(0, 0%, 100%, 1); /* White */
+  --clr-neutral-400: hsla(271, 12%, 34%, 1); /* Davy's Grey */
+
+  --ff-body: "Manrope", sans-serif;
+  --ff-accent: "Fraunces", serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-body: 1rem;
+  --fs-primary-heading: 3.125rem;
+  --fs-secondary-heading: 2rem;
+  --fs-sub-heading: 1.75rem;
+}
+
+/* Tablet, 768px */
+@media (min-width: 48em) {
+  :root {
+    --fs-primary-heading: 3.75rem;
+    --fs-secondary-heading: 3rem;
+  }
+}
+
+/* Desktop, 1440px */
+@media (min-width: 90em) {
+  :root {
+    --fs-body: 1.125rem;
+    --fs-primary-heading: 5rem;
+    --fs-secondary-heading: 3.5rem;
+    --fs-sub-heading: 2rem;
+  }
+}
 
 /* ----- CSS RESET ----- */
 
@@ -23,6 +86,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
 img,
 picture,
 video,
@@ -39,9 +107,71 @@ select {
   font: inherit;
 }
 
-/* ----- GENERAL ----- */
-
 /* ----- UTILITIES ----- */
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+
+.fs-sub-heading {
+  font-size: var(--fs-sub-heading);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
+
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.background-primary-100 {
+  background-color: var(--clr-primary-100);
+}
+
+.background-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.background-accent-400 {
+  background-color: var(--clr-accent-400);
+}
+
+.background-neutral-100 {
+  background-color: var(--clr-primary-400);
+}
+
+/* ----- GENERAL STYLING ----- */
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-neutral-400);
+}
 
 /* ----- BUTTONS ----- */
 
@@ -52,4 +182,3 @@ select {
 /* ----- BLOCK STYLES ----- */
 
 /* ----- MEDIA QUERIES ----- */
-
